@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="index.js"></script>
+    <title>Mood Tracker</title>
+</head>
+<body>
+    <main>
+        <h1>How are you feeling today?</h1>
+        <div class="mood">
+            <!-- <span class="happy">😊</span>
+            <span class="neutral">😐</span>
+            <span class="sad">🙁</span> -->
+            <form>
+                <textarea name="input" placeholder="I played basketball with friends, it was such a good day. My friends shared some cake with me, yum!!!! I have lasagna for dinner, my fave dish! It’s a beautiful day :)"></textarea>
+                <button disabled >Add to your diary</button>
+            </form>
+        </div>
+        <ul>
+            <li>
+                <div class="container">
+                    <i class="icon">😊</i>
+                    <div class="message">
+                        <span class="date">Mon. 10/12/2022</span>
+                        <p>I played basketball with friends, it was such a good day. My friends shared some cake with me, yum!!!! </br> I have lasagna for dinner, my fave dish! It’s a beautiful day :)</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <template>
+        <li class="saved-mood">
+            <div class="container">
+                <i class="icon">😊</i>
+                <div class="message">
+                    <span class="date"></span>
+                    <p></p>
+                </div>
+            </div>
+        </li>
+    </template>
+</body>
+</html>

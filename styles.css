@@ -1,0 +1,157 @@
+/* CSS Reset*/
+
+* { margin: 0; padding: 0; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body { min-height: 100dvh; }
+input, button, textarea, select { font: inherit }
+
+p { text-wrap: pretty; }
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+ul {list-style: none; }
+
+img, video, svg { height: auto; max-width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition: none;
+    }
+}
+
+body {
+    background: #F4FCFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    place-content: center;
+}
+
+main {
+    margin: auto;
+    width: 60%;
+    max-height: 70dvh;
+    gap: 24px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #FFF;
+    border-radius: 16px;
+    padding: 48px 32px 48px 32px;
+    overflow-y:scroll;
+    scrollbar-width: thin;
+
+    box-shadow: hsla(194, 80%, 25%, 0.1) 0px 10px 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.mood {
+    width: 100%;
+
+    display: flex;
+
+    /* Remove flex-direction: column when displayed icons instead of text-area*/
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    > span {
+        font-size: 48px;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    > textarea {
+        width: 100%;
+        height: 200px;
+        max-height: 400px;
+    
+        padding: 24px 32px;
+        border: none;
+        background: #F4FCFF;
+        border-radius: 8px 8px 0px 0px;
+        margin: 0;
+
+        font-size: 18px;
+        line-height: 1.5;
+    
+        resize: vertical;
+        outline: none;
+        scrollbar-width: thin;
+    }
+    
+    > button {
+        border: none;
+        border-radius: 0 0 8px 8px;
+        padding: 16px 16px;
+        color: #F4FCFF;
+        background: #359ABA;
+        font-weight: 500;
+
+        cursor: pointer;
+
+        &[disabled] {
+            background: hsl(194, 20%, 80%);
+            cursor: default;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 16px 16px 24px 16px;
+    border: 2px solid #359ABA;
+    border-radius: 8px;
+
+    > i {
+        font-size: 32px;
+        font-style: normal;
+        padding: 0px 16px 0 0;
+    }
+
+    & span {
+        font-size: 12px;
+    }
+
+    & p {
+        font-weight: 500;
+    }
+}
+
+::-webkit-resizer {
+    display: none;
+}
+
+::placeholder {
+    color: hsl(194, 15%, 60%);
+}
+
+
+/*Change in js so scrollbar hiddes when not scrolling*/
+main::-webkit-scrollbar {
+    display: none;
+}
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+main {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        width: 90%;
+    }
+}
