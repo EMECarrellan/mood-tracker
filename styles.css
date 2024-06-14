@@ -32,8 +32,8 @@ body {
 
 main {
     margin: auto;
-    width: 60%;
-    max-height: 70dvh;
+    width: 80dvh;
+    max-height: 80dvh;
     gap: 24px;
     
     display: flex;
@@ -55,15 +55,18 @@ h1 {
 
 .mood {
     width: 100%;
+}
+.emojis {
+    width: 100%;
 
     display: flex;
 
     /* Remove flex-direction: column when displayed icons instead of text-area*/
-    flex-direction: column;
     justify-content: center;
     gap: 16px;
     > span {
         font-size: 48px;
+        cursor: pointer;
     }
 }
 
@@ -98,9 +101,9 @@ form {
         color: #F4FCFF;
         background: #359ABA;
         font-weight: 500;
-
+        
         cursor: pointer;
-
+        
         &[disabled] {
             background: hsl(194, 20%, 80%);
             cursor: default;
@@ -129,6 +132,8 @@ form {
         font-weight: 500;
     }
 }
+
+.hidden { display: none; }
 
 ::-webkit-resizer {
     display: none;
